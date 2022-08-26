@@ -52,6 +52,7 @@ h2 {
     border: none;
     background-color: white;
     border-radius: 10px;
+    font-family: inherit;
 }
 
 .form button {

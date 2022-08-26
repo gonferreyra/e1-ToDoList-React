@@ -17,10 +17,12 @@ const TodoForm = ({ addTodo }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (todo.task.trim()) {
+        if (todo.task.trim().length >= 5) {
             addTodo({ ...todo, id: new Date().getTime() })
             // reset form
             setTodo({ ...todo, task: "" })
+        } else {
+            alert("La tarea debe contener al menos 5 caracteres")
         }
     };
 
