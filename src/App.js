@@ -11,7 +11,7 @@ export const App = () => {
     // const [todos, setTodos] = useState([]);
     const [todos, setTodos] = useState(initialState);
 
-    // console.log(todos)
+    console.log(todos)
 
     useEffect(() => {
         localStorage.setItem('todos', JSON.stringify(todos))
@@ -26,6 +26,10 @@ export const App = () => {
         setTodos(todos.filter(todo => todo.id !== id))
     };
 
+    const deleteAll = () => {
+        setTodos([]);
+    };
+
 
     return (
         <>
@@ -34,6 +38,7 @@ export const App = () => {
             <TodoList
                 todos={todos}
                 deleteTodo={deleteTodo}
+                deleteAll={deleteAll}
             />
         </>
     )

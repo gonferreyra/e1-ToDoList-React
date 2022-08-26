@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@300;400&display=swap');
 
 * {
     margin: 0;
@@ -9,16 +10,22 @@ body {
     text-align: center;
     width: 100%;
     margin: auto;
-    background-color: rgb(126, 58, 58);
-    color: white
+    background: #e4e7f5;
+    color: rgb(59, 55, 55);
+    font-family: 'Noto Serif HK', serif;
 }
 
 h1 {
     margin: 1rem auto;
+
+    background: violet;
+    display: inline-block;
+    width: 370px;
+    padding: 1rem 0;
 }
 
 h2 {
-    margin: 1rem;
+    padding: 1rem;
 }
 
 .form-container {
@@ -31,11 +38,20 @@ h2 {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+
+    background: violet;
+    max-width: 370px;
+    margin: auto;
+    padding: 1.3rem 0;
+    border-radius: 10px;
 }
 
 .form input {
     width: 250px;
     height: 30px;
+    border: none;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .form button {
@@ -44,12 +60,19 @@ h2 {
     border-radius: 10px;
     border: none;
     cursor: pointer;
+    font-family: inherit;
 }
 
 .task-container {
-    max-width: 350px;
+    max-width: 370px;
     margin: 2rem auto;
-    border: 2px solid black;
+    border-radius: 10px;
+    color: rgb(59, 55, 55);
+}
+
+.task__card {
+    background: white;
+    border-radius: 10px;
 }
 
 li {
@@ -58,7 +81,7 @@ li {
     gap: 1rem;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem 2rem;
     width: 250px;
     margin: auto;
 }
@@ -68,10 +91,23 @@ p {
 
 .li-button {
     border: none;
-    /* border-radius: 10px; */
-    background: rgb(2, 2, 2);
+    background: rgb(59, 55, 55);
     color: white;
     width: 1rem;
     height: 1rem;
     cursor: pointer;
+
+}
+
+.deleteAll {
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    margin: 1rem auto;
+    background-color: violet;
+    color: rgb(59, 55, 55);
+    font-family: inherit;
+
 }

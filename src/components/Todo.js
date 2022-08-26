@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Todo = ({ todo, index, deleteTodo, toggleComplete }) => {
+const Todo = ({ todo, index, deleteTodo }) => {
 
     const handleDelete = () => {
         deleteTodo(todo.id)
