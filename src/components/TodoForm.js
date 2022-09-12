@@ -9,7 +9,6 @@ const TodoForm = ({ addTodo }) => {
         done: false
     });
 
-    console.log(todo)
     const handleTaskInputChange = (e) => {
         setTodo({ ...todo, task: e.target.value })
     };
@@ -31,7 +30,7 @@ const TodoForm = ({ addTodo }) => {
             <form onSubmit={handleSubmit} className="form">
                 <input
                     type="text"
-                    name="task"
+                    name="task2"
                     value={todo.task}
                     onChange={handleTaskInputChange}
                 />

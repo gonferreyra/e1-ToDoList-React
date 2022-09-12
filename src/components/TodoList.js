@@ -1,7 +1,7 @@
 import React from 'react'
 import Todo from './Todo'
 
-const TodoList = ({ todos, deleteTodo, deleteAll }) => {
+const TodoList = ({ todos, deleteTodo, deleteAll, toggleComplete }) => {
     return (
         <div className='task-container'>
             <div className='task__card'>
@@ -18,6 +18,7 @@ const TodoList = ({ todos, deleteTodo, deleteAll }) => {
                                     index={i}
                                     todo={todo}
                                     deleteTodo={deleteTodo}
+                                    toggleComplete={toggleComplete}
                                 />
                             ))
                         }

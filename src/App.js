@@ -8,10 +8,8 @@ const initialState = JSON.parse(localStorage.getItem('todos')) || [];
 
 export const App = () => {
 
-    // const [todos, setTodos] = useState([]);
+    // Lista ToDos
     const [todos, setTodos] = useState(initialState);
-
-    console.log(todos)
 
     useEffect(() => {
         localStorage.setItem('todos', JSON.stringify(todos))
@@ -30,6 +28,19 @@ export const App = () => {
         setTodos([]);
     };
 
+    const toggleComplete = (id) => {
+        setTodos(
+            todos.map(todo => {
+                if (todo.id === id) {
+                    return {
+                        ...todo,
+                        done: !todo.done
+                    }
+                }
+                return todo
+            })
+        )
+    };
 
     return (
         <>
@@ -39,6 +50,7 @@ export const App = () => {
                 todos={todos}
                 deleteTodo={deleteTodo}
                 deleteAll={deleteAll}
+                toggleComplete={toggleComplete}
             />
         </>
     )
