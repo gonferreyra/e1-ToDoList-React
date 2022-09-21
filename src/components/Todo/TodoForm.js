@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { UserContext } from '../Context/UserContext';
 
 
-const TodoForm = ({ addTodo }) => {
+const TodoForm = () => {
+
+    const { addTodo } = useContext(UserContext);
 
     const [todo, setTodo] = useState({
         id: "",

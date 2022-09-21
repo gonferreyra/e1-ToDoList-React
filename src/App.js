@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import TodoForm from './components/TodoForm';
-import TodoList from './components/TodoList';
+import Navbar from './components/Navbar/Navbar';
+import AppRouter from './components/router/AppRouter';
+import { UserContext } from './components/Context/UserContext';
+// import TodoForm from './components/TodoForm';
+// import TodoList from './components/TodoList';
 
 import './style.css'
 
@@ -44,6 +47,11 @@ export const App = () => {
 
     return (
         <>
+            <UserContext.Provider value={{ addTodo, todos, deleteTodo, deleteAll, toggleComplete }}>
+                <AppRouter />
+            </UserContext.Provider>
+
+            {/* <Navbar />
             <h1>ToDo List - React</h1>
             <TodoForm addTodo={addTodo} />
             <TodoList
@@ -51,7 +59,7 @@ export const App = () => {
                 deleteTodo={deleteTodo}
                 deleteAll={deleteAll}
                 toggleComplete={toggleComplete}
-            />
+            /> */}
         </>
     )
 }

@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from '../Context/UserContext'
 import Todo from './Todo'
 
-const TodoList = ({ todos, deleteTodo, deleteAll, toggleComplete }) => {
+const TodoList = () => {
+
+    const { todos, deleteTodo, toggleComplete, deleteAll } = useContext(UserContext)
+
     return (
         <div className='task-container'>
             <div className='task__card'>
@@ -23,7 +27,6 @@ const TodoList = ({ todos, deleteTodo, deleteAll, toggleComplete }) => {
                             ))
                         }
                     </ol>}
-
                 <button
                     className='deleteAll'
                     onClick={deleteAll}

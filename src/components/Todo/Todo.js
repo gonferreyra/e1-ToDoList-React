@@ -12,7 +12,6 @@ const Todo = ({ todo, index, deleteTodo, toggleComplete }) => {
 
     return (
         <li>
-            {/* <input type='checkbox' onClick={handleComplete} /> */}
             <p
                 key={todo.id}
                 onClick={handleComplete}
