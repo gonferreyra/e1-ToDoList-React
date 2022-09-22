@@ -9,10 +9,10 @@ const TodoList = () => {
     return (
         <div className='task-container'>
             <div className='task__card'>
-                <h2>Tareas</h2>
+                <h2>ToDos</h2>
                 {todos.length === 0
                     ?
-                    <h2>No hay tareas para mostrar</h2>
+                    <h2>No tasks to show</h2>
                     :
                     <ol className='tasks'>
                         {
@@ -31,7 +31,7 @@ const TodoList = () => {
                     className='deleteAll'
                     onClick={deleteAll}
                 >
-                    Borrar todas las tareas
+                    Delete All
                 </button>
             </div>
         </div>

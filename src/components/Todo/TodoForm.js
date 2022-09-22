@@ -24,22 +24,25 @@ const TodoForm = () => {
             // reset form
             setTodo({ ...todo, task: "" })
         } else {
-            alert("La tarea debe contener al menos 5 caracteres")
+            alert("ToDo's must contain at least 5 characters. Please try again")
         }
     };
 
     return (
-        <div className='form-container'>
-            <form onSubmit={handleSubmit} className="form">
-                <input
-                    type="text"
-                    name="task2"
-                    value={todo.task}
-                    onChange={handleTaskInputChange}
-                />
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+        <>
+            <h1>ToDo List - React</h1>
+            <div className='form-container'>
+                <form onSubmit={handleSubmit} className="form">
+                    <input
+                        type="text"
+                        name="task2"
+                        value={todo.task}
+                        onChange={handleTaskInputChange}
+                    />
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </>
     )
 }
 

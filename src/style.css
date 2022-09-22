@@ -58,6 +58,7 @@ h2 {
   background-color: white;
   border-radius: 10px;
   font-family: inherit;
+  outline: none;
 }
 
 .form button {
@@ -67,6 +68,10 @@ h2 {
   border: none;
   cursor: pointer;
   font-family: inherit;
+}
+
+.form button:hover {
+  font-size: 15px;
 }
 
 .task-container {
@@ -141,3 +146,107 @@ p {
 }
 
 /* Navbar */
+.navbar {
+  background: violet;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.navbar ul li {
+  justify-content: center;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: violet;
+  width: 300px;
+  margin: auto;
+  padding: 1.3rem 0;
+  border-radius: 10px;
+}
+
+.form__container input {
+  width: 250px;
+  height: 30px;
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+  font-family: inherit;
+  text-align: center;
+  outline: none;
+}
+
+.form__container button {
+  width: 250px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.form__container button:hover {
+  font-size: 15px;
+}
+
+.card__container {
+  width: 300px;
+  height: 350px;
+  margin: 1rem auto;
+  background: violet;
+  border-radius: 5px;
+}
+.card__container-name {
+}
+
+.card__container-img img {
+  width: 300px;
+  height: 270px;
+}
+
+@media screen and (min-width: 768px) {
+  .form__container,
+  .card__container {
+    width: 370px;
+  }
+}
+
+.active {
+  color: white;
+  border-bottom: 1x solid white;
+}
+
+.video__container {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
