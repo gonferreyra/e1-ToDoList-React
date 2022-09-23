@@ -4,12 +4,12 @@ import Todo from './Todo'
 
 const TodoList = () => {
 
-    const { todos, deleteTodo, toggleComplete, deleteAll } = useContext(UserContext)
+    const { todos, deleteAll } = useContext(UserContext)
 
     return (
         <div className='task-container'>
             <div className='task__card'>
-                <h2>ToDos</h2>
+                <h2>To-Dos</h2>
                 {todos.length === 0
                     ?
                     <h2>No tasks to show</h2>
@@ -21,8 +21,8 @@ const TodoList = () => {
                                     key={todo.id}
                                     index={i}
                                     todo={todo}
-                                    deleteTodo={deleteTodo}
-                                    toggleComplete={toggleComplete}
+                                // deleteTodo={deleteTodo}
+                                // toggleComplete={toggleComplete}
                                 />
                             ))
                         }

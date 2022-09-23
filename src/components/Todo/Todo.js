@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from '../Context/UserContext';
 
-const Todo = ({ todo, index, deleteTodo, toggleComplete }) => {
+const Todo = ({ todo, index }) => {
+
+    const { deleteTodo, toggleComplete } = useContext(UserContext)
 
     const handleDelete = () => {
         deleteTodo(todo.id)
